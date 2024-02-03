@@ -1,10 +1,14 @@
 {
   "name": "my-business",
   "version": "1.0.0",
-  "description": "Business app for practice",
+  "description": "E-Commerce app for practice",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development nodemon src/app.js",
+    "staging": "cross-env NODE_ENV=staging nodemon src/app.js",
+    "prod": "cross-env NODE_ENV=production nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,17 @@
   "bugs": {
     "url": "https://github.com/taimoor07/my-business/issues"
   },
-  "homepage": "https://github.com/taimoor07/my-business#readme"
+  "homepage": "https://github.com/taimoor07/my-business#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1",
+    "mongoose-unique-validator": "^5.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
 }
